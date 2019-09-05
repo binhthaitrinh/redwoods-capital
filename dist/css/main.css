@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,500&display=swap");
+.container {
+  max-width: 1280px;
+  margin: auto;
+  overflow: hidden; }
+
+.lead {
+  font-size: 2rem;
+  margin-bottom: 3rem; }
+
+.text-center {
+  text-align: center; }
+
+.primary-text {
+  color: #388e3c; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.px-1 {
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.px-2 {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+
+.px-3 {
+  padding-left: 3rem;
+  padding-right: 3rem; }
+
+.px-4 {
+  padding-left: 4rem;
+  padding-right: 4rem; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+.my-5 {
+  margin: 5rem 0; }
+
+.my-6 {
+  margin: 6rem 0; }
+
+.my-7 {
+  margin: 7rem 0; }
+
+.my-8 {
+  margin: 8rem 0; }
+
+.section-title {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.2; }
+  .section-title:before {
+    content: '';
+    height: 4px;
+    width: 4rem;
+    background-color: green;
+    display: block;
+    margin-bottom: 1rem; }
+
+.section-subtext {
+  font-size: 1.6rem;
+  margin-bottom: 5rem; }
