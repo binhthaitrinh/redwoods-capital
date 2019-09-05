@@ -1,3 +1,61 @@
 @import 'config';
 @import 'utilities';
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 10px;
+  font-family: 'Catamaran', sans-serif;
+  background: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  width: 15rem;
+}
+
+#header {
+  &-home {
+    height: 100vh;
+  }
+}
+
+.nav-bar {
+  padding: 2rem 0;
+  background-color: #fff;
+  box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.2);
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu-nav {
+      display: flex;
+      font-size: 1.8rem;
+
+      .menu-item {
+        margin-left: 1.8rem;
+      }
+    }
+  }
+}
