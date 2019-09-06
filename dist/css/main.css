@@ -80,7 +80,8 @@
 
 .section-subtext {
   font-size: 1.6rem;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  width: 80rem; }
 
 .overlay-light, .overlay-dark {
   position: absolute;
@@ -142,6 +143,53 @@ form {
     border-radius: 4px;
     border: 1px solid #ccc; }
 
+.header-hero-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.8rem 4rem;
+  transform: translate(-50%, -50%);
+  overflow: hidden; }
+  .header-hero-box::after {
+    content: '';
+    position: absolute;
+    display: block;
+    opacity: 0.9;
+    background-color: #388e3c;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 150%;
+    transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1); }
+  .header-hero-box:hover:after {
+    transform: scale(2) translateX(0) translateY(0) rotate(-28deg); }
+  .header-hero-box h1 {
+    font-size: 6rem;
+    position: relative;
+    z-index: 2;
+    cursor: default; }
+
+.modal__container {
+  display: flex;
+  align-items: center;
+  font-family: 'Catamaran', sans-serif;
+  color: #333; }
+  .modal__container .person-info img {
+    width: 20rem;
+    margin-right: 5rem; }
+  .modal__container .person-info .person-name {
+    font-size: 3.5rem;
+    color: #388e3c;
+    line-height: 1;
+    margin-top: 1.2rem; }
+  .modal__container .person-info .person-title {
+    font-size: 1.8rem; }
+
 * {
   margin: 0;
   padding: 0;
@@ -196,10 +244,25 @@ img {
   #header-home .hero-title {
     font-size: 10rem;
     line-height: 1;
-    text-shadow: 6px 6px 0px #333; }
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5); }
   #header-home .hero-text {
     font-size: 2.5rem;
     text-shadow: 3px 3px 3px #333; }
+
+#header-about {
+  height: 100vh;
+  overflow: hidden;
+  position: relative; }
+  #header-about-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1; }
+    #header-about-background img {
+      height: 100%;
+      object-fit: cover; }
 
 .nav-bar {
   padding: 2rem 0;
@@ -273,8 +336,6 @@ img {
 
 .section-philosophy {
   background-color: #f4f4f4; }
-  .section-philosophy .section-subtext {
-    width: 80rem; }
   .section-philosophy-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -302,11 +363,34 @@ img {
 .section-contact {
   background-color: #f4f4f4; }
 
-footer {
+.section-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4rem; }
+  .section-team-grid-item {
+    display: flex;
+    flex-direction: column; }
+    .section-team-grid-item img {
+      height: 227px;
+      object-fit: cover; }
+    .section-team-grid-item .person-info {
+      background-color: #f4f4f4;
+      padding: 2rem 1rem;
+      border-bottom: 1rem solid #388e3c;
+      margin-top: 0px;
+      height: 100%; }
+    .section-team-grid-item .person-name {
+      font-size: 3.5rem;
+      color: #388e3c;
+      line-height: 1; }
+    .section-team-grid-item .person-title {
+      font-size: 1.8rem; }
+
+#footer {
   background-color: #333;
   padding: 2rem 0;
   text-align: center;
   color: #fff;
   border-top: 1rem solid #388e3c; }
-  footer p {
+  #footer p {
     font-size: 1.8rem; }

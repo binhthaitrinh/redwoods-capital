@@ -72,12 +72,32 @@ img {
       &-title {
         font-size: 10rem;
         line-height: 1;
-        text-shadow: 6px 6px 0px $dark-color;
+        text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
       }
 
       &-text {
         font-size: 2.5rem;
         text-shadow: 3px 3px 3px $dark-color;
+      }
+    }
+  }
+
+  // Header about page
+  &-about {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    &-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      img {
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
@@ -186,10 +206,6 @@ img {
   &-philosophy {
     background-color: $light-color;
 
-    .section-subtext {
-      width: 80rem;
-    }
-
     &-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -228,9 +244,45 @@ img {
   &-contact {
     background-color: $light-color;
   }
+
+  &-team {
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 4rem;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          height: 227px;
+          object-fit: cover;
+        }
+
+        .person-info {
+          background-color: $light-color;
+          padding: 2rem 1rem;
+          border-bottom: 1rem solid $main-color;
+          margin-top: 0px;
+          height: 100%;
+        }
+
+        .person-name {
+          font-size: 3.5rem;
+          color: $main-color;
+          line-height: 1;
+        }
+
+        .person-title {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
 }
 
-footer {
+#footer {
   background-color: $dark-color;
   padding: 2rem 0;
   text-align: center;
