@@ -215,4 +215,29 @@ img {
       }
     }
   }
+
+  &-partner {
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 8rem;
+      align-items: center;
+    }
+  }
+
+  &-contact {
+    background-color: $light-color;
+  }
+}
+
+footer {
+  background-color: $dark-color;
+  padding: 2rem 0;
+  text-align: center;
+  color: #fff;
+  border-top: 1rem solid $main-color;
+
+  p {
+    font-size: 1.8rem;
+  }
 }
