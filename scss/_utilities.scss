@@ -151,6 +151,21 @@ section {
       font-size: 5rem;
       font-weight: 700;
       line-height: 1.2;
+      text-transform: capitalize;
+
+      &:before {
+        content: '';
+        height: 4px;
+        width: 4rem;
+        background-color: $main-color;
+        display: block;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-subtext {
+      font-size: 1.6rem;
+      margin-bottom: 5rem;
     }
   }
 }
