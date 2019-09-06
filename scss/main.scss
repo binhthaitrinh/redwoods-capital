@@ -124,20 +124,95 @@ img {
 }
 
 // Section goal
-.section-goal {
-  .goal {
+.section {
+  &-goal {
+    .goal {
+      &-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+      }
+
+      &-item {
+        background-color: $light-color;
+        padding: 2.5rem 2rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        border-left: 1rem solid $main-color;
+      }
+    }
+  }
+
+  &-mission {
+    background-image: url('https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg');
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    position: relative;
+
+    &-content {
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      max-width: 80rem;
+
+      .mission-title {
+        font-size: 6rem;
+        text-transform: uppercase;
+        line-height: 1;
+
+        &:after {
+          display: block;
+          width: 5rem;
+          height: 4px;
+          background-color: $main-color;
+          content: '';
+          margin: 2rem auto;
+        }
+      }
+
+      .mission-text {
+        font-size: 2rem;
+        line-height: 2;
+      }
+    }
+  }
+
+  &-philosophy {
+    background-color: $light-color;
+
+    .section-subtext {
+      width: 80rem;
+    }
+
     &-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 2rem;
-    }
+      grid-gap: 3rem;
 
-    &-item {
-      background-color: $light-color;
-      padding: 2.5rem 2rem;
-      font-size: 1.8rem;
-      font-weight: 600;
-      border-left: 1rem solid $main-color;
+      &-item {
+        background-color: darken($light-color, 8);
+        padding: 6rem 4rem;
+        border-top: 1rem solid $main-color;
+      }
+
+      &-title {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin: 1.5rem 0;
+        color: $main-color;
+        text-transform: capitalize;
+      }
+
+      &-text {
+        font-size: 1.7rem;
+        line-height: 2;
+      }
     }
   }
 }

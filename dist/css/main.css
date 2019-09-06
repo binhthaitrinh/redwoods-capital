@@ -82,14 +82,19 @@
   font-size: 1.6rem;
   margin-bottom: 5rem; }
 
-.overlay-light {
+.overlay-light, .overlay-dark {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
   z-index: 2; }
+
+.overlay-light {
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.overlay-dark {
+  background-color: rgba(0, 0, 0, 0.7); }
 
 .btn-primary {
   display: inline-block;
@@ -123,7 +128,7 @@ section {
       display: block;
       margin-bottom: 1rem; }
   section .section-subtext {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-bottom: 5rem; }
 
 * {
@@ -223,3 +228,56 @@ img {
   font-size: 1.8rem;
   font-weight: 600;
   border-left: 1rem solid #388e3c; }
+
+.section-mission {
+  background-image: url("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  position: relative; }
+  .section-mission-content {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 80rem; }
+    .section-mission-content .mission-title {
+      font-size: 6rem;
+      text-transform: uppercase;
+      line-height: 1; }
+      .section-mission-content .mission-title:after {
+        display: block;
+        width: 5rem;
+        height: 4px;
+        background-color: #388e3c;
+        content: '';
+        margin: 2rem auto; }
+    .section-mission-content .mission-text {
+      font-size: 2rem;
+      line-height: 2; }
+
+.section-philosophy {
+  background-color: #f4f4f4; }
+  .section-philosophy .section-subtext {
+    width: 80rem; }
+  .section-philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem; }
+    .section-philosophy-grid-item {
+      background-color: #e0e0e0;
+      padding: 6rem 4rem;
+      border-top: 1rem solid #388e3c; }
+    .section-philosophy-grid-title {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin: 1.5rem 0;
+      color: #388e3c;
+      text-transform: capitalize; }
+    .section-philosophy-grid-text {
+      font-size: 1.7rem;
+      line-height: 2; }
