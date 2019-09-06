@@ -11,7 +11,7 @@
 .text-center {
   text-align: center; }
 
-.primary-text {
+.text-primary {
   color: #388e3c; }
 
 .py-1 {
@@ -82,6 +82,39 @@
   font-size: 1.6rem;
   margin-bottom: 5rem; }
 
+.overlay-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2; }
+
+.btn-primary {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.5s ease-out; }
+
+.btn-primary {
+  background-color: #388e3c;
+  color: #fff;
+  font-size: 1.8rem; }
+  .btn-primary:hover {
+    background-color: #2a692d;
+    transform: translateY(-5px); }
+
+section {
+  padding: 8rem 0;
+  overflow: hidden; }
+  section .section-title {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.2; }
+
 * {
   margin: 0;
   padding: 0;
@@ -109,12 +142,46 @@ img {
   width: 15rem; }
 
 #header-home {
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden;
+  position: relative; }
+  #header-home .swiper-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1; }
+    #header-home .swiper-container img {
+      height: 100%;
+      object-fit: cover; }
+  #header-home .hero-box {
+    position: relative;
+    top: 40%;
+    left: 0%;
+    z-index: 10;
+    color: #fff;
+    width: 1280px;
+    margin: auto; }
+    #header-home .hero-box .hero-container {
+      max-width: 95rem; }
+  #header-home .hero-title {
+    font-size: 10rem;
+    line-height: 1;
+    text-shadow: 6px 6px 0px #333; }
+  #header-home .hero-text {
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 3px #333; }
 
 .nav-bar {
   padding: 2rem 0;
   background-color: #fff;
-  box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.2); }
+  box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%; }
   .nav-bar .main-nav {
     display: flex;
     justify-content: space-between;
@@ -124,3 +191,11 @@ img {
       font-size: 1.8rem; }
       .nav-bar .main-nav .menu-nav .menu-item {
         margin-left: 1.8rem; }
+        .nav-bar .main-nav .menu-nav .menu-item a {
+          padding-bottom: 0.5rem;
+          border-bottom: 3px solid transparent;
+          transition: all 0.5s ease-out; }
+          .nav-bar .main-nav .menu-nav .menu-item a:hover {
+            border-color: #388e3c; }
+          .nav-bar .main-nav .menu-nav .menu-item a.current {
+            border-color: #388e3c; }

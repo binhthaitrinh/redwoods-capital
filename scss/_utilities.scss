@@ -13,7 +13,7 @@
   text-align: center;
 }
 
-.primary-text {
+.text-primary {
   color: $main-color;
 }
 
@@ -107,4 +107,50 @@
 .section-subtext {
   font-size: 1.6rem;
   margin-bottom: 5rem;
+}
+
+.overlay-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+%btn-shared {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  border: none;
+  @include easeOut;
+}
+
+.btn {
+  &-primary {
+    @extend %btn-shared;
+    background-color: $main-color;
+    color: #fff;
+    font-size: 1.8rem;
+
+    &:hover {
+      background-color: darken($main-color, 10);
+      transform: translateY(-5px);
+    }
+  }
+}
+
+section {
+  padding: 8rem 0;
+  overflow: hidden;
+
+  .section {
+    &-title {
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+  }
 }
