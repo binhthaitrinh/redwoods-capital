@@ -9,6 +9,11 @@
   margin-bottom: 3rem;
 }
 
+.sub-lead {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -233,11 +238,35 @@ form {
     z-index: 2;
     cursor: default;
   }
+
+  p {
+    font-size: 1.8rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  &-service {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    z-index: 10;
+    width: $website-width;
+    display: block;
+    color: #fff;
+    padding: 0.8rem 4rem;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
+    h1 {
+      font-size: 6rem;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .modal__container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-family: 'Catamaran', sans-serif;
   color: $dark-color;
 
@@ -258,4 +287,13 @@ form {
       font-size: 1.8rem;
     }
   }
+}
+
+.underline {
+  display: block;
+  margin: 0;
+  height: 4px;
+  width: 20rem;
+  background-color: $main-color;
+  margin: 6rem auto;
 }

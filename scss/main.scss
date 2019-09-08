@@ -87,6 +87,10 @@ img {
     height: 100vh;
     overflow: hidden;
     position: relative;
+    background-image: url('../img/investment.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 
     &-background {
       position: absolute;
@@ -95,11 +99,17 @@ img {
       height: 100%;
       width: 100%;
       z-index: 1;
-      img {
-        height: 100%;
-        object-fit: cover;
-      }
     }
+  }
+
+  &-portfolio {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url('../img/cross-creek.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0% 20%;
   }
 }
 
@@ -254,9 +264,10 @@ img {
       &-item {
         display: flex;
         flex-direction: column;
+        cursor: pointer;
 
         img {
-          height: 227px;
+          min-height: 25rem;
           object-fit: cover;
         }
 
@@ -276,6 +287,75 @@ img {
 
         .person-title {
           font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  &-syndication {
+    &-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      grid-gap: 6rem;
+
+      .image {
+        height: 40rem;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &-key-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 6rem;
+    }
+  }
+
+  &-management {
+    background-color: $light-color;
+    &-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 6rem;
+
+      .item {
+        i {
+          font-size: 10rem;
+        }
+
+        h2 {
+          margin: 2rem 0;
+          line-height: 1;
+          font-size: 3rem;
+          color: $main-color;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  &-featured {
+    &-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+
+      .item {
+        .item-text {
+          margin-top: 1.5rem;
+          .lead {
+            margin-bottom: 0;
+          }
+
+          h2 {
+            font-size: 3rem;
+            color: $main-color;
+          }
         }
       }
     }

@@ -8,6 +8,10 @@
   font-size: 2rem;
   margin-bottom: 3rem; }
 
+.sub-lead {
+  font-size: 1.6rem;
+  margin-bottom: 2rem; }
+
 .text-center {
   text-align: center; }
 
@@ -173,10 +177,28 @@ form {
     position: relative;
     z-index: 2;
     cursor: default; }
+  .header-hero-box p {
+    font-size: 1.8rem;
+    position: relative;
+    z-index: 2; }
+  .header-hero-box-service {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    z-index: 10;
+    width: 1280px;
+    display: block;
+    color: #fff;
+    padding: 0.8rem 4rem;
+    transform: translate(-50%, -50%);
+    overflow: hidden; }
+    .header-hero-box-service h1 {
+      font-size: 6rem;
+      text-transform: uppercase; }
 
 .modal__container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-family: 'Catamaran', sans-serif;
   color: #333; }
   .modal__container .person-info img {
@@ -189,6 +211,14 @@ form {
     margin-top: 1.2rem; }
   .modal__container .person-info .person-title {
     font-size: 1.8rem; }
+
+.underline {
+  display: block;
+  margin: 0;
+  height: 4px;
+  width: 20rem;
+  background-color: #388e3c;
+  margin: 6rem auto; }
 
 * {
   margin: 0;
@@ -252,7 +282,11 @@ img {
 #header-about {
   height: 100vh;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  background-image: url("../img/investment.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center; }
   #header-about-background {
     position: absolute;
     top: 0;
@@ -260,9 +294,15 @@ img {
     height: 100%;
     width: 100%;
     z-index: 1; }
-    #header-about-background img {
-      height: 100%;
-      object-fit: cover; }
+
+#header-portfolio {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url("../img/cross-creek.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0% 20%; }
 
 .nav-bar {
   padding: 2rem 0;
@@ -369,9 +409,10 @@ img {
   grid-gap: 4rem; }
   .section-team-grid-item {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    cursor: pointer; }
     .section-team-grid-item img {
-      height: 227px;
+      min-height: 25rem;
       object-fit: cover; }
     .section-team-grid-item .person-info {
       background-color: #f4f4f4;
@@ -385,6 +426,49 @@ img {
       line-height: 1; }
     .section-team-grid-item .person-title {
       font-size: 1.8rem; }
+
+.section-syndication-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 6rem; }
+  .section-syndication-content .image {
+    height: 40rem; }
+    .section-syndication-content .image img {
+      height: 100%;
+      object-fit: cover; }
+
+.section-syndication-key-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6rem; }
+
+.section-management {
+  background-color: #f4f4f4; }
+  .section-management-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem; }
+    .section-management-content .item i {
+      font-size: 10rem; }
+    .section-management-content .item h2 {
+      margin: 2rem 0;
+      line-height: 1;
+      font-size: 3rem;
+      color: #388e3c;
+      text-transform: capitalize; }
+
+.section-featured-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem; }
+  .section-featured-content .item .item-text {
+    margin-top: 1.5rem; }
+    .section-featured-content .item .item-text .lead {
+      margin-bottom: 0; }
+    .section-featured-content .item .item-text h2 {
+      font-size: 3rem;
+      color: #388e3c; }
 
 #footer {
   background-color: #333;
