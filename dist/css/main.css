@@ -156,13 +156,14 @@ form {
   color: #fff;
   padding: 0.8rem 4rem;
   transform: translate(-50%, -50%);
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #388e3c; }
   .header-hero-box::after {
     content: '';
     position: absolute;
     display: block;
     opacity: 0.9;
-    background-color: #388e3c;
+    background-color: salmon;
     top: 0;
     left: 0;
     z-index: 1;
@@ -231,7 +232,9 @@ body {
   font-family: 'Catamaran', sans-serif;
   background: #fff;
   color: #333;
-  line-height: 1.6; }
+  line-height: 1.6;
+  height: 100%;
+  width: 100%; }
 
 a {
   text-decoration: none;
@@ -303,6 +306,30 @@ img {
   background-attachment: fixed;
   background-size: cover;
   background-position: 0% 20%; }
+
+#header-contact {
+  height: 100vh;
+  overflow: hidden;
+  position: relative; }
+  #header-contact .contact-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: calc(100vh - 94px);
+    position: relative; }
+    #header-contact .contact-content .map {
+      height: calc(100vh - 94px); }
+    #header-contact .contact-content .form {
+      display: flex;
+      flex-direction: column;
+      padding-left: 5rem;
+      justify-content: center;
+      align-items: flex-start; }
+      #header-contact .contact-content .form .lead {
+        margin-bottom: 0rem; }
+      #header-contact .contact-content .form .primary-text {
+        font-size: 1.8rem; }
+      #header-contact .contact-content .form img {
+        max-width: 25rem; }
 
 .nav-bar {
   padding: 2rem 0;
@@ -468,7 +495,9 @@ img {
       margin-bottom: 0; }
     .section-featured-content .item .item-text h2 {
       font-size: 3rem;
-      color: #388e3c; }
+      color: #388e3c;
+      text-transform: capitalize;
+      line-height: 1.4; }
 
 #footer {
   background-color: #333;

@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header id="header-portfolio">
+    <header id="header-contact">
       <div class="nav-bar">
         <div class="container">
           <nav class="main-nav">
@@ -47,54 +47,33 @@
         </div>
       </div>
 
-      <div class="header-portfolio-background">
-        <!-- <img src="img/investment.jpg" alt="" /> -->
-      </div>
-
-      <div class="header-hero-box">
-        <h1>Current Offering</h1>
-        <p>Cross Creek Villas - Missouri</p>
-        <p>80 Units / 304 Beds</p>
-        <p>4912 Alpine Ridge Dr, Columbia, MO 65202</p>
-      </div>
-
-      <div class="overlay-light"></div>
-    </header>
-
-    <section class="section-featured">
-      <div class="container">
-        <h1 class="section-title">Featured Transactions</h1>
-        <div class="section-featured-content my-5">
-          <div class="item">
-            <img src="img/swiper/3.jpg" alt="" />
-            <div class="item-text">
-              <h2>University landing</h2>
-              <p class="lead">1600 East Washington Street</p>
-              <p class="lead">Greensboro, NC 27401</p>
-              <p class="lead text-primary">132 Beds</p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="img/swiper/castaway.jpg" alt="" />
-            <div class="item-text">
-              <h2>castaway at hidden harbor</h2>
-              <p class="lead">501 Leisure Lake Drive</p>
-              <p class="lead">Warner Robins, GA 31088</p>
-              <p class="lead text-primary">211 Units</p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="img/swiper/parkside.jpg" alt="" />
-            <div class="item-text">
-              <h2>parkside crossing apartments</h2>
-              <p class="lead">4233 Jonesboro Road</p>
-              <p class="lead">Forrest Park, GA 30297</p>
-              <p class="lead text-primary">250 Units</p>
-            </div>
-          </div>
+      <div class="contact-content">
+        <div class="map"></div>
+        <div class="form">
+          <h1 class="section-title">Contact us</h1>
+          <div class="bottom-line"></div>
+          <p class="primary-text my-2">
+            For any inquiries, please call or email us:
+          </p>
+          <p class="lead">
+            US: +01 (949) 783-4299 | info@rwscapital.com
+          </p>
+          <p class="lead">VN: +84 (823) 554-2545</p>
+          <img src="img/us.webp" alt="" class="my-3" />
+          <p class="primary-text">US Office</p>
+          <p class="lead">
+            4000 MacArthur Blvd., Suite 600 EAST TOWER
+          </p>
+          <p class="lead">Newport Beach, CA 92660</p>
+          <img src="img/vn.webp" alt="" class="my-3" />
+          <p class="primary-text">VN Office</p>
+          <p class="lead">
+            Suite 1115, Level 11, Deutsches Haus,
+          </p>
+          <p class="lead">33 Le Duan, District 1, Ho Chi Minh City</p>
         </div>
       </div>
-    </section>
+    </header>
 
     <footer id="footer">
       <p>
@@ -104,6 +83,31 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+
     <script src="js/main.js"></script>
+
+    <script>
+      var map;
+      const rws = { lat: 33.7283507, lng: -117.9131828 };
+      function initMap() {
+        map = new google.maps.Map(document.querySelector('.map'), {
+          center: { lat: 33.7283507, lng: -117.9131828 },
+          zoom: 16,
+          styles: [
+            { elementType: 'labels.text-fill', stylers: [{ color: 'black' }] }
+          ]
+        });
+        var marker = new google.maps.Marker({
+          position: rws,
+          map: map,
+          label: 'Redwoods Capital'
+        });
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdDA1UM1QId-HsEVHySz3LoMVCSRubbI0&callback=initMap"
+      async
+      defer
+    ></script>
   </body>
 </html>

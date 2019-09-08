@@ -212,13 +212,14 @@ form {
   padding: 0.8rem 4rem;
   transform: translate(-50%, -50%);
   overflow: hidden;
+  background-color: $main-color;
 
   &::after {
     content: '';
     position: absolute;
     display: block;
     opacity: 0.9;
-    background-color: $main-color;
+    background-color: salmon;
     top: 0;
     left: 0;
     z-index: 1;
