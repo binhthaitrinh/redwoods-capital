@@ -139,10 +139,11 @@
 
 %btn-shared {
   display: inline-block;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 4rem;
   border-radius: 5rem;
   cursor: pointer;
   border: none;
+  outline: none;
   @include easeOut;
 }
 
@@ -153,9 +154,25 @@
     color: #fff;
     font-size: 1.8rem;
 
+    a {
+      color: #fff;
+    }
+
     &:hover {
       background-color: darken($main-color, 10);
       transform: translateY(-5px);
+    }
+  }
+
+  &-revert {
+    @extend %btn-shared;
+    background-color: salmon;
+    color: #fff;
+    font-size: 1.8rem;
+    @include easeOut;
+
+    &:hover {
+      background-color: darken(salmon, 10);
     }
   }
 }
@@ -194,7 +211,7 @@ form {
   input,
   textarea {
     display: block;
-    width: 50%;
+    width: 60%;
     padding: 1.2rem 0.8rem;
     margin: 1.5rem 0;
     border-radius: 4px;
@@ -244,6 +261,7 @@ form {
     font-size: 1.8rem;
     position: relative;
     z-index: 2;
+    cursor: default;
   }
 
   &-service {

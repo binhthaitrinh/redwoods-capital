@@ -17,6 +17,7 @@ body {
   line-height: 1.6;
   height: 100%;
   width: 100%;
+  // scroll-behavior: smooth;
 }
 
 a {
@@ -277,6 +278,55 @@ img {
       &-text {
         font-size: 1.7rem;
         line-height: 2;
+      }
+    }
+  }
+
+  &-subscribe {
+    background-color: $main-color;
+
+    .section-title {
+      color: #fff;
+
+      &::before {
+        background-color: #fff;
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      width: 60rem;
+      align-items: center;
+      background-color: #fff;
+      padding-left: 3rem;
+      border-radius: 10rem;
+      margin: 5rem auto;
+      @include easeOut;
+
+      &:focus-within {
+        transform: translateY(-2px);
+        box-shadow: 0 0.7rem 3rem rgba(101, 90, 86, 0.08);
+      }
+
+      .btn-revert {
+        padding: 1.2rem 3rem;
+      }
+
+      input {
+        font-size: 1.8rem;
+        margin: 0;
+        border: none;
+        background: none;
+        width: 30rem;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: $dark-color;
+        }
       }
     }
   }

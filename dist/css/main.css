@@ -101,21 +101,32 @@
 .overlay-dark {
   background-color: rgba(0, 0, 0, 0.7); }
 
-.btn-primary {
+.btn-primary, .btn-revert {
   display: inline-block;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 4rem;
   border-radius: 5rem;
   cursor: pointer;
   border: none;
+  outline: none;
   transition: all 0.5s ease-out; }
 
 .btn-primary {
   background-color: #388e3c;
   color: #fff;
   font-size: 1.8rem; }
+  .btn-primary a {
+    color: #fff; }
   .btn-primary:hover {
     background-color: #2a692d;
     transform: translateY(-5px); }
+
+.btn-revert {
+  background-color: salmon;
+  color: #fff;
+  font-size: 1.8rem;
+  transition: all 0.5s ease-out; }
+  .btn-revert:hover {
+    background-color: #f85441; }
 
 section {
   padding: 8rem 0;
@@ -141,7 +152,7 @@ form {
   form input,
   form textarea {
     display: block;
-    width: 50%;
+    width: 60%;
     padding: 1.2rem 0.8rem;
     margin: 1.5rem 0;
     border-radius: 4px;
@@ -181,7 +192,8 @@ form {
   .header-hero-box p {
     font-size: 1.8rem;
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    cursor: default; }
   .header-hero-box-service {
     position: absolute;
     top: 55%;
@@ -420,6 +432,38 @@ img {
     .section-philosophy-grid-text {
       font-size: 1.7rem;
       line-height: 2; }
+
+.section-subscribe {
+  background-color: #388e3c; }
+  .section-subscribe .section-title {
+    color: #fff; }
+    .section-subscribe .section-title::before {
+      background-color: #fff; }
+  .section-subscribe form {
+    display: flex;
+    justify-content: space-between;
+    width: 60rem;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 3rem;
+    border-radius: 10rem;
+    margin: 5rem auto;
+    transition: all 0.5s ease-out; }
+    .section-subscribe form:focus-within {
+      transform: translateY(-2px);
+      box-shadow: 0 0.7rem 3rem rgba(101, 90, 86, 0.08); }
+    .section-subscribe form .btn-revert {
+      padding: 1.2rem 3rem; }
+    .section-subscribe form input {
+      font-size: 1.8rem;
+      margin: 0;
+      border: none;
+      background: none;
+      width: 30rem; }
+      .section-subscribe form input:focus {
+        outline: none; }
+      .section-subscribe form input::placeholder {
+        color: #333; }
 
 .section-partner-grid {
   display: grid;

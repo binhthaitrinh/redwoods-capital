@@ -125,4 +125,23 @@ const team = [
   }
 ];
 
+document.getElementById('#smooth').addEventListener('click', function(e) {
+  console.log('asd');
+  if (this.hash !== '') {
+    e.preventDefault();
+    const hash = this.hash;
+
+    document.querySelector('html, body').animate(
+      {
+        scrollTop: document.querySelector(hash).offset().top
+      },
+      800,
+      function() {
+        window.location.hash = hash;
+      }
+    );
+  }
+});
+console.log('dsa');
+
 console.log('connected...');
