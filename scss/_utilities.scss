@@ -2,6 +2,7 @@
   max-width: $website-width;
   margin: auto;
   overflow: hidden;
+  padding: 0 2.4rem;
 }
 
 .lead {
@@ -315,4 +316,27 @@ form {
   width: 20rem;
   background-color: $main-color;
   margin: 6rem auto;
+}
+
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+
+.grid-gap {
+  &-1 {
+    grid-gap: 1rem;
+  }
+  &-2 {
+    grid-gap: 2rem;
+  }
+
+  &-6 {
+    grid-gap: 6rem;
+  }
+}
+
+.modal__overlay {
+  z-index: 1000;
 }

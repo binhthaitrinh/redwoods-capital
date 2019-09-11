@@ -1,5 +1,6 @@
 @import 'config';
 @import 'utilities';
+
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,500&display=swap');
 
 * {
@@ -51,6 +52,22 @@ img {
       height: 100%;
       width: 100%;
       z-index: 1;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $dark-color;
+        opacity: 0.3;
+        z-index: 1;
+      }
+
+      .swiper-button-next {
+        z-index: 30;
+      }
       img {
         height: 100%;
         object-fit: cover;
@@ -60,11 +77,12 @@ img {
     .hero {
       &-box {
         position: relative;
-        top: 40%;
+        top: 35%;
         left: 0%;
         z-index: 10;
         color: #fff;
         width: $website-width;
+        padding: 0 2.4rem;
         margin: auto;
 
         .hero-container {
@@ -90,7 +108,7 @@ img {
     height: 100vh;
     overflow: hidden;
     position: relative;
-    background-image: url('../img/investment.jpg');
+    background-image: url('../img/our-team.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -197,12 +215,6 @@ img {
 .section {
   &-goal {
     .goal {
-      &-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2rem;
-      }
-
       &-item {
         background-color: $light-color;
         padding: 2.5rem 2rem;
@@ -257,10 +269,6 @@ img {
     background-color: $light-color;
 
     &-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 3rem;
-
       &-item {
         background-color: darken($light-color, 8);
         padding: 6rem 4rem;
@@ -354,9 +362,38 @@ img {
         display: flex;
         flex-direction: column;
         cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        .view-more {
+          position: absolute;
+          display: block;
+          opacity: 0.9;
+          background-color: $main-color;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          @include easeOut;
+
+          h3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 3rem;
+          }
+        }
+
+        &:hover .view-more {
+          opacity: 0.8;
+        }
 
         img {
-          min-height: 25rem;
+          height: 25rem;
           object-fit: cover;
         }
 
@@ -399,9 +436,11 @@ img {
     }
 
     &-key-points {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 6rem;
+      .item {
+        img {
+          height: 18rem;
+        }
+      }
     }
   }
 
@@ -430,10 +469,6 @@ img {
 
   &-featured {
     &-content {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 1rem;
-
       .item {
         .item-text {
           margin-top: 1.5rem;
@@ -464,3 +499,5 @@ img {
     font-size: 1.8rem;
   }
 }
+
+@import 'mobile';
