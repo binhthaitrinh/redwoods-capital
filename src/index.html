@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
@@ -32,7 +33,11 @@
         <div class="container">
           <nav class="main-nav">
             <a href="index.html">
-              <img src="img/logo.png" alt="" class="logo" />
+              <img
+                src="img/logo.png"
+                alt="Redwoods Capital Logo"
+                class="logo"
+              />
             </a>
 
             <ul class="menu-nav">
@@ -63,7 +68,7 @@
           </div>
 
           <div class="swiper-slide">
-            <img src="img/swiper/3.jpg" alt="" />
+            <img src="img/swiper/3.jpg" alt="University Landing" />
           </div>
           <div class="swiper-slide">
             <img src="img/swiper/4.jpg" alt="" />
@@ -105,11 +110,15 @@
         </p>
 
         <div class="goal-grid grid-3-col">
-          <div class="goal-item">Safe-harbor-asset</div>
-          <div class="goal-item">String cash-flow</div>
-          <div class="goal-item">Tax Shelter</div>
-          <div class="goal-item">Accredited management team</div>
-          <div class="goal-item">Appreciation & Diversitification</div>
+          <div class="goal-item" data-aos="fade-up">Safe-harbor-asset</div>
+          <div class="goal-item" data-aos="fade-up">String cash-flow</div>
+          <div class="goal-item" data-aos="fade-up">Tax Shelter</div>
+          <div class="goal-item" data-aos="fade-up">
+            Accredited management team
+          </div>
+          <div class="goal-item" data-aos="fade-up">
+            Appreciation & Diversitification
+          </div>
         </div>
       </div>
     </section>
@@ -205,43 +214,47 @@
         <div class="section-partner-grid my-5">
           <img
             src="./img/bedrock.webp"
-            alt=""
+            alt="Bedrock"
             class="section-partner-grid-item"
           />
           <img
             src="./img/crownbay.webp"
-            alt=""
+            alt="Crownbay"
             class="section-partner-grid-item"
           />
           <img
             src="./img/missionbay.webp"
-            alt=""
+            alt="Missionbay"
             class="section-partner-grid-item"
           />
           <img
             src="./img/burkey.webp"
-            alt=""
+            alt="Burkey"
             class="section-partner-grid-item"
           />
           <img
             src="./img/syndication.webp"
-            alt=""
+            alt="Syndication"
             class="section-partner-grid-item"
           />
-          <img src="./img/belk.webp" alt="" class="section-partner-grid-item" />
+          <img
+            src="./img/belk.webp"
+            alt="Belkshire"
+            class="section-partner-grid-item"
+          />
           <img
             src="./img/arcan.webp"
-            alt=""
+            alt="Arcan Capital"
             class="section-partner-grid-item"
           />
           <img
             src="./img/windes-logo.png"
-            alt=""
+            alt="Windes"
             class="section-partner-grid-item"
           />
           <img
             src="./img/wither.webp"
-            alt=""
+            alt="Withersworldwide"
             class="section-partner-grid-item"
           />
         </div>
@@ -282,5 +295,10 @@
         Copyright &copy; 2019 by Redwoods Capital LLC. All Rights Reserved.
       </p>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
